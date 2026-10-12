@@ -60,18 +60,20 @@ This protocol applies when ending a Beads implementation workflow. It is subordi
 
 ## Build & Test
 
-_Add your build and test commands here_
-
 ```bash
-# Example:
-# npm install
-# npm test
+npm install
+npm run dev     # local dev server
+npm test        # vitest (unit + jsdom component tests)
+npm run build   # typecheck, then a single self-contained dist/index.html
 ```
 
 ## Architecture Overview
 
-_Add a brief overview of your project architecture_
+Preact + Vite. Reference data is imported straight from `docs/ref/*.json` and inlined at build time.
+- `src/lib/` — pure functions: digit stepping/clamping (`digits.ts`), pitch/keyboard helpers (`music.ts`), lookups (`lookup.ts`).
+- `src/components/` — thin UI over those. App state is three numbers (set, style, variation).
+- The UI says "genre" for the 1-100 input; code calls it `set`. Genres join to sets by number, not label.
 
 ## Conventions & Patterns
 
-_Add your project-specific conventions here_
+Keep logic in `src/lib` as pure functions with tests; components stay presentational.

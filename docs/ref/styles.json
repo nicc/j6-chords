@@ -17,7 +17,7 @@
   {
    "style": 1,
    "category": "Arp",
-   "name": "8ths:",
+   "name": "8ths",
    "variations": [
     "up 1",
     "up/down 1",
@@ -36,7 +36,7 @@
   {
    "style": 2,
    "category": "Arp",
-   "name": "16ths:",
+   "name": "16ths",
    "variations": [
     "up 1",
     "up/down 1",
@@ -55,7 +55,7 @@
   {
    "style": 3,
    "category": "Beat",
-   "name": "length:",
+   "name": "length",
    "variations": [
     "double whole note",
     "whole note",
@@ -74,7 +74,7 @@
   {
    "style": 4,
    "category": "Beat",
-   "name": "pattern:",
+   "name": "pattern",
    "variations": [
     "o___ (16th)",
     "_o__ (16th)",
@@ -93,7 +93,7 @@
   {
    "style": 5,
    "category": "Beat",
-   "name": "pattern:",
+   "name": "pattern",
    "variations": [
     "oo__ (16th)",
     "o_o_ (16th)",

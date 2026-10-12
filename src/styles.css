@@ -1,0 +1,449 @@
+/* Palette sampled from reference photos: TR-808 swatches (grey, red, orange, yellow, cream)
+   and the CR-78 blue. */
+:root {
+  --grey: #2a2720;
+  --grey-raised: #36332b;
+  --black-key: #151411;
+  --red: #dd1201;
+  --orange: #f47900;
+  --yellow: #e3e007;
+  --cream: #edeacb;
+  --blue: #5e9cd9;
+
+  --ink: var(--grey);
+  --text: var(--cream);
+  --text-dim: rgba(237, 234, 203, 0.55);
+  --led-on: #ff2a12;
+  --led-off: rgba(221, 18, 1, 0.1);
+  --led-window: #130907;
+
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  background: var(--grey);
+  color: var(--text);
+  font-family: 'Helvetica Neue', Helvetica, Arial, system-ui, sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+button:focus-visible,
+[role='spinbutton']:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+
+.app {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: calc(14px + env(safe-area-inset-top)) 16px calc(32px + env(safe-area-inset-bottom));
+}
+
+/* Masthead, after "Rhythm Composer TR-808" */
+.masthead {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--blue);
+  color: var(--orange);
+}
+
+.brand {
+  font-size: 22px;
+  letter-spacing: 0.01em;
+}
+
+.model {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+/* Roland bracket label: a line with downturned ends either side of the caption */
+.bracket {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cream);
+  white-space: nowrap;
+}
+
+.bracket::before,
+.bracket::after {
+  content: '';
+  flex: 1;
+  min-width: 8px;
+  height: 6px;
+  margin-top: 6px;
+  border-top: 1px solid var(--blue);
+}
+
+.bracket::before {
+  border-left: 1px solid var(--blue);
+}
+
+.bracket::after {
+  border-right: 1px solid var(--blue);
+}
+
+/* Seven-segment inputs */
+.segment-field {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.segment-input {
+  --digit-w: 38px;
+  display: grid;
+  grid-template-columns: repeat(var(--digits), var(--digit-w));
+  grid-template-rows: 28px 66px 28px;
+  column-gap: 2px;
+  row-gap: 8px;
+  padding: 0 8px;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.led-window {
+  grid-row: 2;
+  grid-column: 1 / -1;
+  margin: -5px -8px;
+  border-radius: 3px;
+  background: var(--led-window);
+  box-shadow:
+    inset 0 2px 4px rgba(0, 0, 0, 0.9),
+    0 0 0 1px #000,
+    0 1px 0 1px rgba(255, 255, 255, 0.06);
+}
+
+.digit-face {
+  position: relative;
+  padding: 3px 2px;
+  touch-action: none;
+  cursor: ns-resize;
+}
+
+.digit-face svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 0 3px rgba(255, 42, 18, 0.55));
+}
+
+.seg {
+  fill: var(--led-off);
+}
+
+.seg.on {
+  fill: var(--led-on);
+}
+
+.nudge {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.nudge svg {
+  width: 16px;
+  height: 10px;
+  fill: var(--cream);
+  transition: fill 60ms;
+}
+
+.nudge:active svg {
+  fill: var(--orange);
+}
+
+.nudge:disabled {
+  cursor: default;
+}
+
+.nudge:disabled svg {
+  fill: var(--text-dim);
+  opacity: 0.35;
+}
+
+/* Genre */
+.genre {
+  padding-top: 18px;
+}
+
+.genre-head {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.genre-name {
+  margin: 0;
+  flex: 1;
+  min-width: 0;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--orange);
+  overflow-wrap: anywhere;
+}
+
+/* Reserves room for the longest description so the keyboard holds still while scrolling sets. */
+.genre-desc {
+  margin: 14px 0 0;
+  min-height: calc(4 * 1.4em);
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+/* Keyboard */
+.keyboard {
+  position: relative;
+  height: 260px;
+  margin-top: 14px;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+.whites {
+  display: flex;
+  gap: 3px;
+  height: 100%;
+}
+
+.key {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  touch-action: none;
+  transition: background-color 60ms;
+}
+
+.key.white {
+  position: relative;
+  flex: 1;
+  padding-bottom: 10px;
+  border-radius: 0 0 5px 5px;
+  background: var(--cream);
+  color: var(--ink);
+  box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.12);
+}
+
+.key.black {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  height: 58%;
+  padding-bottom: 8px;
+  border-radius: 0 0 4px 4px;
+  background: var(--black-key);
+  color: var(--cream);
+  box-shadow:
+    0 0 0 2px var(--grey),
+    inset 0 -4px 0 rgba(255, 255, 255, 0.06);
+}
+
+.key:disabled {
+  cursor: default;
+}
+
+.key.held {
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.35);
+}
+
+.key.black.held {
+  box-shadow:
+    0 0 0 2px var(--grey),
+    inset 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.key.lit {
+  background: var(--orange);
+  color: var(--ink);
+}
+
+/* Reads bottom to top, like a spine label */
+.chord-name {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  transition: opacity 80ms linear;
+}
+
+.holding .chord-name {
+  opacity: 0;
+}
+
+.voicing {
+  position: absolute;
+  inset: auto 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* Phrasing */
+.phrasing {
+  margin-top: 22px;
+  border-top: 1px solid var(--blue);
+}
+
+.section-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 14px 0;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cream);
+}
+
+.toggle-tri {
+  width: 10px;
+  height: 10px;
+  fill: var(--blue);
+  transition: transform 120ms;
+}
+
+.section-toggle[aria-expanded='true'] .toggle-tri {
+  transform: rotate(90deg);
+}
+
+.phrasing-body {
+  padding-bottom: 8px;
+}
+
+.phrasing-inputs {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 22px;
+}
+
+/* Vertical panel rule between control groups */
+.roland-divider {
+  width: 1px;
+  background: var(--blue);
+}
+
+.phrasing-text {
+  min-height: 2.6em;
+  margin: 18px 0 14px;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.3;
+  text-align: center;
+  color: var(--yellow);
+}
+
+/* Cream label tab, after the TR-808 instrument labels */
+.tab-button {
+  display: block;
+  margin: 0 auto;
+  padding: 5px 14px;
+  border-radius: 2px;
+  background: var(--cream);
+  color: var(--ink);
+  font-size: 13px;
+  font-variant: small-caps;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.tab-button:active {
+  background: var(--yellow);
+}
+
+/* Popup */
+.popup-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  background: rgba(10, 9, 7, 0.7);
+}
+
+.popup {
+  width: min(100%, 340px);
+  padding: 14px 16px 18px;
+  border: 1px solid var(--blue);
+  border-radius: 4px;
+  background: var(--grey-raised);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.popup-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.popup-head .bracket {
+  flex: 1;
+}
+
+.popup-close {
+  width: 32px;
+  height: 32px;
+  font-size: 24px;
+  line-height: 1;
+  color: var(--cream);
+}
+
+.legend {
+  margin: 14px 0 0;
+}
+
+.legend-row {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  align-items: baseline;
+  padding: 6px 0;
+}
+
+.legend dt {
+  font-family: ui-monospace, Menlo, monospace;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--yellow);
+}
+
+.legend dd {
+  margin: 0;
+  font-size: 15px;
+}
