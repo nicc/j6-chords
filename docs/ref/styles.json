@@ -76,18 +76,18 @@
    "category": "Beat",
    "name": "pattern",
    "variations": [
-    "o___ (16th)",
-    "_o__ (16th)",
-    "__o_ (16th)",
-    "___o (16th)",
-    "o~o_ (8th + 16th)",
-    "o_o~ (16th + 8th)",
-    "o~~o (dotted 8th + 16th)",
-    "_o~o (8th + 16th)",
-    "ooo_ (16th)",
-    "oo_o (16th)",
-    "o_oo (16th)",
-    "_ooo (16th)"
+    "'o___' (16th)",
+    "'_o__' (16th)",
+    "'__o_' (16th)",
+    "'___o' (16th)",
+    "'o~o_' (8th + 16th)",
+    "'o_o~' (16th + 8th)",
+    "'o~~o' (dotted 8th + 16th)",
+    "'_o~o' (8th + 16th)",
+    "'ooo_' (16th)",
+    "'oo_o' (16th)",
+    "'o_oo' (16th)",
+    "'_ooo' (16th)"
    ]
   },
   {
@@ -95,18 +95,18 @@
    "category": "Beat",
    "name": "pattern",
    "variations": [
-    "oo__ (16th)",
-    "o_o_ (16th)",
-    "o__o (16th)",
-    "_oo_ (16th)",
-    "_o_o (16th)",
-    "__oo (16th)",
-    "o__ (16th, syncopated)",
-    "_o_ (16th, syncopated)",
-    "__o (16th, syncopated)",
-    "oo_ (16th, syncopated)",
-    "o_o (16th, syncopated)",
-    "_oo (16th, syncopated)"
+    "'oo__' (16th)",
+    "'o_o_' (16th)",
+    "'o__o' (16th)",
+    "'_oo_' (16th)",
+    "'_o_o' (16th)",
+    "'__oo' (16th)",
+    "'o__' (16th, syncopated)",
+    "'_o_' (16th, syncopated)",
+    "'__o' (16th, syncopated)",
+    "'oo_' (16th, syncopated)",
+    "'o_o' (16th, syncopated)",
+    "'_oo' (16th, syncopated)"
    ]
   },
   {
