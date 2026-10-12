@@ -4,7 +4,7 @@ This file provides instructions and context for AI coding agents working on this
 
 ## Workflow (standing instruction from Nic)
 
-After every change: run `npm test` and `npm run build` (typecheck + bundle), fix any failures, then commit and push to `origin main`. No need to ask first. This overrides the "do not commit or push unless asked" default in the Beads block below. Never force-push; if a push is rejected, stop and tell Nic.
+After every change: run `npm test` and `npm run build` (typecheck + bundle), fix any failures, then commit and push to `origin main`. No need to ask first. This overrides the "do not commit or push unless asked" default in the Beads block below. Never force-push. If a push is rejected, run `git pull --rebase origin main`; if it applies cleanly, rerun tests and build, then push. If the rebase conflicts, abort it (`git rebase --abort`) and tell Nic.
 
 <!-- BEGIN BEADS INTEGRATION v:1 profile:minimal hash:1105d646 -->
 ## Beads Issue Tracker
