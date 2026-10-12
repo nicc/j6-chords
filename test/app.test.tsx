@@ -110,6 +110,19 @@ describe('keyboard hold', () => {
     expect(key('C').querySelector('.voicing')?.textContent).toBe('C4C5');
   });
 
+  // Desktop browsers focus a clicked button, so pressing a new key blurs the previous one
+  // just after the new key's pointerdown. That blur must not end the new hold.
+  it('holds a new key even when the previous key blurs after the press', () => {
+    render(<App />);
+    setGenre(2);
+    fireEvent.pointerDown(key('C'));
+    fireEvent.pointerUp(key('C'));
+    fireEvent.pointerDown(key('D'));
+    fireEvent.blur(key('C'));
+    expect(document.querySelector('.keyboard')).toHaveClass('holding');
+    expect(key('D')).toHaveAttribute('aria-pressed', 'true');
+  });
+
   it('does nothing at genre 0', () => {
     render(<App />);
     fireEvent.pointerDown(key('C'));

@@ -16,7 +16,9 @@ export function Keyboard({ chords }: Props) {
   const heldChord = held === null ? undefined : chords?.[held];
   const voicing = heldChord ? notesByKey(heldChord.notes) : null;
 
-  const release = () => setHeld(null);
+  // A key only ends its own hold. On desktop, pressing a new key blurs the previous one
+  // after the new pointerdown; an unconditional release there would cancel the new hold.
+  const release = (pc: number) => () => setHeld((h) => (h === pc ? null : h));
 
   const renderKey = (pc: number) => {
     const black = isBlackKey(pc);
@@ -28,6 +30,7 @@ export function Keyboard({ chords }: Props) {
       ? { left: `${(blackKeyBoundary(pc) - BLACK_WIDTH / 2) * WHITE_SHARE}%`, width: `${BLACK_WIDTH * WHITE_SHARE}%` }
       : undefined;
     const chord = chords?.[pc];
+    const end = release(pc);
 
     return (
       <button
@@ -40,17 +43,17 @@ export function Keyboard({ chords }: Props) {
         aria-pressed={held === pc}
         disabled={!chords}
         onPointerDown={() => setHeld(pc)}
-        onPointerUp={release}
-        onPointerCancel={release}
-        onPointerLeave={release}
+        onPointerUp={end}
+        onPointerCancel={end}
+        onPointerLeave={end}
         onKeyDown={(e) => {
           if ((e.key === ' ' || e.key === 'Enter') && !e.repeat) {
             e.preventDefault();
             setHeld(pc);
           }
         }}
-        onKeyUp={release}
-        onBlur={release}
+        onKeyUp={end}
+        onBlur={end}
       >
         {chord && <span class="chord-name">{chord.chord}</span>}
         {notes.length > 0 && (
