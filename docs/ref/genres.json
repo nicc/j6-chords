@@ -1,0 +1,303 @@
+{
+ "note": "Descriptions are my summary of the chords in each set, not Roland's text.",
+ "genres": [
+  {
+   "genre": "Pop",
+   "sets": [
+    1,
+    2,
+    28,
+    29,
+    30,
+    31,
+    32
+   ],
+   "description": "Bright, familiar harmony. Triads, 7ths and add9s with lots of slash chords for smooth bass lines. 28-30 are laid out as songs in one key (28-29 C major, 30 C minor)."
+  },
+  {
+   "genre": "Jazz",
+   "sets": [
+    3,
+    4,
+    5,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94
+   ],
+   "description": "Rich and extended. maj7/maj9, m9/m11, 13ths, altered dominants (7#9, 7b9, aug7), half-diminished and diminished. 5 is maj9 on every key; 88 uses rootless voicings."
+  },
+  {
+   "genre": "Blues",
+   "sets": [
+    6
+   ],
+   "description": "Dominant 9ths and 7#9 (the 'Hendrix' chord), 13ths, and dim7 passing chords."
+  },
+  {
+   "genre": "Trad Maj",
+   "sets": [
+    7
+   ],
+   "description": "Plain triads of C major on the white keys, with dim7 passing chords on most black keys."
+  },
+  {
+   "genre": "Trad Min",
+   "sets": [
+    8
+   ],
+   "description": "C minor triads (natural minor) plus diminished chords."
+  },
+  {
+   "genre": "Trad Min 2",
+   "sets": [
+    9
+   ],
+   "description": "Like 8 but harmonic minor: adds G major, D#aug and Bdim."
+  },
+  {
+   "genre": "Pop Min",
+   "sets": [
+    10,
+    11
+   ],
+   "description": "Moody minor pop: m(add9), maj7s on the flat degrees, m7b5 and dim7 for tension."
+  },
+  {
+   "genre": "Jazz Min",
+   "sets": [
+    12,
+    13
+   ],
+   "description": "Minor-key jazz: m7(11), m9, half-diminished, altered dominants and maj7#5."
+  },
+  {
+   "genre": "Oct Stack",
+   "sets": [
+    14
+   ],
+   "description": "Two notes, not chords: each key plays its note plus the octave above."
+  },
+  {
+   "genre": "4th Stack",
+   "sets": [
+    15
+   ],
+   "description": "Two notes: each key plays its note plus a perfect 4th above."
+  },
+  {
+   "genre": "5th Stack",
+   "sets": [
+    16
+   ],
+   "description": "Two notes: each key plays a power chord (root + 5th)."
+  },
+  {
+   "genre": "Utility",
+   "sets": [
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26
+   ],
+   "description": "Building blocks. 17-24 put one chord type on every key: major, minor, maj7, m7, maj9, m9, maj9(#11), m11. 25-26 are Cmaj7 and Cm7 in rising inversions."
+  },
+  {
+   "genre": "Pop/Synth",
+   "sets": [
+    27
+   ],
+   "description": "Five triads (C, Em, G, Am, Bm) repeating up the keyboard, an octave higher each time."
+  },
+  {
+   "genre": "Cinematic",
+   "sets": [
+    33,
+    36,
+    37
+   ],
+   "description": "Open and floating: sus2 and add9/add11 colors, 6sus2, and slash chords for sweeping bass lines. 36 is sus2 chords over a bass note a minor 3rd below the root."
+  },
+  {
+   "genre": "Cinematic/Synthwave",
+   "sets": [
+    34
+   ],
+   "description": "Only sus2 chords, climbing a scale (C D Eb F G Bb) and repeating an octave up."
+  },
+  {
+   "genre": "Cinematic/House",
+   "sets": [
+    35
+   ],
+   "description": "All 7th chords: each maj7 paired with its relative m7, moving up by whole steps."
+  },
+  {
+   "genre": "New Age/Cinematic",
+   "sets": [
+    38
+   ],
+   "description": "Gentle and hymn-like: triads and sus4 chords over stepwise slash-chord bass."
+  },
+  {
+   "genre": "Synthwave",
+   "sets": [
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46
+   ],
+   "description": "80s retro: triads, sus2, add9 and maj7 chords, many over pedal or walking bass. 40 is add9 up a scale; 45-46 are plain triad progressions."
+  },
+  {
+   "genre": "Synthwave/House",
+   "sets": [
+    47
+   ],
+   "description": "Smooth m7 and maj7 chords, mostly in C minor, moving step by step."
+  },
+  {
+   "genre": "Trance",
+   "sets": [
+    48
+   ],
+   "description": "Epic minor-key triads (mostly C minor) and slash chords over deep bass notes."
+  },
+  {
+   "genre": "House",
+   "sets": [
+    49,
+    50,
+    51,
+    52,
+    53,
+    54
+   ],
+   "description": "Classic house stabs: mostly m7 and maj7, often the same shape moved around; some slash chords."
+  },
+  {
+   "genre": "Jazz House",
+   "sets": [
+    55,
+    56
+   ],
+   "description": "Jazzier house: maj13, maj7#5, m11, add9 and 6 chords, voiced high."
+  },
+  {
+   "genre": "House/Techno",
+   "sets": [
+    57
+   ],
+   "description": "Dark and tense: maj7(#11), altered and sus chords, and fifths with b9."
+  },
+  {
+   "genre": "Techno",
+   "sets": [
+    58
+   ],
+   "description": "Triads and slash chords; the bass rises one semitone per key."
+  },
+  {
+   "genre": "EDM",
+   "sets": [
+    59,
+    60,
+    61,
+    62,
+    63,
+    64
+   ],
+   "description": "Big, open voicings that often skip the 3rd: maj9/maj13 (no3), 6/9, sus4(add9), 6 and maj7 chords."
+  },
+  {
+   "genre": "Gospel/R&B",
+   "sets": [
+    65,
+    66,
+    67
+   ],
+   "description": "Church-style movement: m7(b13), m11, maj9/maj13, dim7 passing chords, and slash chords over a walking bass."
+  },
+  {
+   "genre": "Lofi R&B",
+   "sets": [
+    68,
+    69
+   ],
+   "description": "Mellow and unresolved: m(add9), maj9, 6/9, m11, sus chords and slash chords."
+  },
+  {
+   "genre": "Funk",
+   "sets": [
+    70,
+    71
+   ],
+   "description": "Dominant-heavy: 9ths, 13ths, altered 7ths (7alt, 7#9, 7b9) and 9sus4."
+  },
+  {
+   "genre": "Neo Soul",
+   "sets": [
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81
+   ],
+   "description": "Lush 7ths and lots of slash chords: m7, maj7, m9, 13ths, maj7sus2, 6sus4, and diminished passing chords. (The manual spells it 'Neo Soul' for 72-75 and 'Neo-Soul' for 76-81.)"
+  },
+  {
+   "genre": "Jazz/Bossa",
+   "sets": [
+    82
+   ],
+   "description": "Pairs of an m7 and a slash chord (Gm7, Bb/Ab ...) moving up by whole steps."
+  },
+  {
+   "genre": "Bossa Nova",
+   "sets": [
+    83,
+    84
+   ],
+   "description": "Bossa staples voiced high: maj7/maj9, m7/m11, dim passing chords, 13(b9) and 9(#11)."
+  },
+  {
+   "genre": "Classical",
+   "sets": [
+    95,
+    96,
+    97,
+    98
+   ],
+   "description": "Triads and 7ths in inversions with strong bass movement. 98 keeps a low D pedal under every chord."
+  },
+  {
+   "genre": "Modern",
+   "sets": [
+    99,
+    100
+   ],
+   "description": "Dense contemporary harmony: maj13, m13, m(maj13), maj9(no3), 6/9 and 13(b9)."
+  }
+ ]
+}

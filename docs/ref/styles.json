@@ -1,0 +1,137 @@
+{
+ "source": "Roland J-6 Owner's Manual v1.02, Phrase List p.34",
+ "legend": {
+  "o": "16th note",
+  "_": "16th rest",
+  "o~": "8th note",
+  "o~~": "dotted 8th note"
+ },
+ "notes": [
+  "Each variation is 1-12 on the VARIATION knob.",
+  "Beat styles (3-5) play the chord on the rhythm shown. The manual only gives the rhythm, so how the chord is voiced there is not stated.",
+  "Style 5 variations 7-12 are 3-step patterns; my reading is that they cycle against the 4-step beat, which is what \"syncopation\" means here (inferred).",
+  "The manual does not explain how \"1\" and \"2\" arp variants differ (e.g. Up 1 vs Up 2).",
+  "Styles 6-9 have 12 variations each, but the manual only names the style, not each variation."
+ ],
+ "styles": [
+  {
+   "style": 1,
+   "category": "Arpeggio",
+   "name": "Arp, 8th notes",
+   "variations": [
+    "Arp up 1 (8th)",
+    "Arp up/down 1 (8th)",
+    "Arp down 1 (8th)",
+    "Arp down 2 (8th)",
+    "Arp up/down 2 (8th)",
+    "Arp up 2 (8th)",
+    "Arp up 1 (8th triplet)",
+    "Arp up/down 1 (8th triplet)",
+    "Arp down 1 (8th triplet)",
+    "Arp down 2 (8th triplet)",
+    "Arp up/down 2 (8th triplet)",
+    "Arp up 2 (8th triplet)"
+   ]
+  },
+  {
+   "style": 2,
+   "category": "Arpeggio",
+   "name": "Arp, 16th notes",
+   "variations": [
+    "Arp up 1 (16th)",
+    "Arp up/down 1 (16th)",
+    "Arp down 1 (16th)",
+    "Arp down 2 (16th)",
+    "Arp up/down 2 (16th)",
+    "Arp up 2 (16th)",
+    "Arp up 1 (16th triplet)",
+    "Arp up/down 1 (16th triplet)",
+    "Arp down 1 (16th triplet)",
+    "Arp down 2 (16th triplet)",
+    "Arp up/down 2 (16th triplet)",
+    "Arp up 2 (16th triplet)"
+   ]
+  },
+  {
+   "style": 3,
+   "category": "Beat",
+   "name": "Beat: note lengths",
+   "variations": [
+    "Double whole note",
+    "Whole note",
+    "Half note",
+    "Quarter note",
+    "Eighth note",
+    "Sixteenth note",
+    "Double whole note triplet",
+    "Whole note triplet",
+    "Half note triplet",
+    "Quarter note triplet",
+    "Eighth note triplet",
+    "Sixteenth note triplet"
+   ]
+  },
+  {
+   "style": 4,
+   "category": "Beat",
+   "name": "Beat: 16th patterns",
+   "variations": [
+    "o___ (16th)",
+    "_o__ (16th)",
+    "__o_ (16th)",
+    "___o (16th)",
+    "o~o_ (8th + 16th)",
+    "o_o~ (16th + 8th)",
+    "o~~o (dotted 8th + 16th)",
+    "_o~o (8th + 16th)",
+    "ooo_ (16th)",
+    "oo_o (16th)",
+    "o_oo (16th)",
+    "_ooo (16th)"
+   ]
+  },
+  {
+   "style": 5,
+   "category": "Beat",
+   "name": "Beat: 16th patterns + syncopated",
+   "variations": [
+    "oo__ (16th)",
+    "o_o_ (16th)",
+    "o__o (16th)",
+    "_oo_ (16th)",
+    "_o_o (16th)",
+    "__oo (16th)",
+    "o__ (16th, syncopated)",
+    "_o_ (16th, syncopated)",
+    "__o (16th, syncopated)",
+    "oo_ (16th, syncopated)",
+    "o_o (16th, syncopated)",
+    "_oo (16th, syncopated)"
+   ]
+  },
+  {
+   "style": 6,
+   "category": "Phrase",
+   "name": "Chord phrases (simple)",
+   "variations": null
+  },
+  {
+   "style": 7,
+   "category": "Phrase",
+   "name": "Chord phrases (rhythmic)",
+   "variations": null
+  },
+  {
+   "style": 8,
+   "category": "Phrase",
+   "name": "Strummed chord phrases (simple)",
+   "variations": null
+  },
+  {
+   "style": 9,
+   "category": "Phrase",
+   "name": "Strummed chord phrases (rhythmic)",
+   "variations": null
+  }
+ ]
+}
