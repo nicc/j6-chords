@@ -11,7 +11,7 @@ export function App() {
     <main class="app">
       <header class="masthead">
         <span class="brand">Chord Reference</span>
-        <span class="model">J-6</span>
+        <span class="model">Roland J-6</span>
       </header>
       <GenrePanel set={set} onSetChange={setSet} />
       <PhrasingPanel
