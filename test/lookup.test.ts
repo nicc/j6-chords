@@ -51,11 +51,11 @@ describe('phrasingText', () => {
     expect(phrasingText(0, 5)).toBeNull();
   });
   it('shows category and name as soon as a style is selected', () => {
-    expect(phrasingText(2, 0)).toBe('Arp 16ths:');
+    expect(phrasingText(2, 0)).toBe('Arp 16ths');
   });
   it('adds the variation once selected', () => {
-    expect(phrasingText(2, 1)).toBe('Arp 16ths: up 1');
-    expect(phrasingText(4, 12)).toBe('Beat pattern: _ooo (16th)');
+    expect(phrasingText(2, 1)).toBe('Arp 16ths up 1');
+    expect(phrasingText(4, 12)).toBe("Beat pattern '_ooo' (16th)");
   });
   it('omits the variation for styles without a list', () => {
     expect(phrasingText(6, 0)).toBe('Phrased chords (simple)');

@@ -133,9 +133,9 @@ describe('phrasing', () => {
     openPhrasing();
     expect(text()).toBe('');
     click('Style up', 2);
-    expect(text()).toBe('Arp 16ths:');
+    expect(text()).toBe('Arp 16ths');
     click('Variation ones up');
-    expect(text()).toBe('Arp 16ths: up 1');
+    expect(text()).toBe('Arp 16ths up 1');
   });
 
   it('waits on style when variation is chosen first', () => {
@@ -144,7 +144,7 @@ describe('phrasing', () => {
     click('Variation ones up', 3);
     expect(text()).toBe('');
     click('Style up');
-    expect(text()).toBe('Arp 8ths: down 1');
+    expect(text()).toBe('Arp 8ths down 1');
   });
 
   it('shows only category and name for styles without variations', () => {
@@ -169,7 +169,7 @@ describe('phrasing', () => {
     click('Style up', 4);
     openPhrasing();
     openPhrasing();
-    expect(text()).toBe('Beat pattern:');
+    expect(text()).toBe('Beat pattern');
   });
 
   it('shows the legend in a popup without the notes', () => {
