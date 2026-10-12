@@ -16,65 +16,65 @@
  "styles": [
   {
    "style": 1,
-   "category": "Arpeggio",
-   "name": "Arp, 8th notes",
+   "category": "Arp",
+   "name": "8ths:",
    "variations": [
-    "Arp up 1 (8th)",
-    "Arp up/down 1 (8th)",
-    "Arp down 1 (8th)",
-    "Arp down 2 (8th)",
-    "Arp up/down 2 (8th)",
-    "Arp up 2 (8th)",
-    "Arp up 1 (8th triplet)",
-    "Arp up/down 1 (8th triplet)",
-    "Arp down 1 (8th triplet)",
-    "Arp down 2 (8th triplet)",
-    "Arp up/down 2 (8th triplet)",
-    "Arp up 2 (8th triplet)"
+    "up 1",
+    "up/down 1",
+    "down 1",
+    "down 2",
+    "up/down 2",
+    "up 2",
+    "up 1 (triplet)",
+    "up/down 1 (triplet)",
+    "down 1 (triplet)",
+    "down 2 (triplet)",
+    "up/down 2 (triplet)",
+    "up 2 (triplet)"
    ]
   },
   {
    "style": 2,
-   "category": "Arpeggio",
-   "name": "Arp, 16th notes",
+   "category": "Arp",
+   "name": "16ths:",
    "variations": [
-    "Arp up 1 (16th)",
-    "Arp up/down 1 (16th)",
-    "Arp down 1 (16th)",
-    "Arp down 2 (16th)",
-    "Arp up/down 2 (16th)",
-    "Arp up 2 (16th)",
-    "Arp up 1 (16th triplet)",
-    "Arp up/down 1 (16th triplet)",
-    "Arp down 1 (16th triplet)",
-    "Arp down 2 (16th triplet)",
-    "Arp up/down 2 (16th triplet)",
-    "Arp up 2 (16th triplet)"
+    "up 1",
+    "up/down 1",
+    "down 1",
+    "down 2",
+    "up/down 2",
+    "up 2",
+    "up 1 (triplet)",
+    "up/down 1 (triplet)",
+    "down 1 (triplet)",
+    "down 2 (triplet)",
+    "up/down 2 (triplet)",
+    "up 2 (triplet)"
    ]
   },
   {
    "style": 3,
    "category": "Beat",
-   "name": "Beat: note lengths",
+   "name": "length:",
    "variations": [
-    "Double whole note",
-    "Whole note",
-    "Half note",
-    "Quarter note",
-    "Eighth note",
-    "Sixteenth note",
-    "Double whole note triplet",
-    "Whole note triplet",
-    "Half note triplet",
-    "Quarter note triplet",
-    "Eighth note triplet",
-    "Sixteenth note triplet"
+    "double whole note",
+    "whole note",
+    "half note",
+    "quarter note",
+    "eighth note",
+    "sixteenth note",
+    "double whole note triplet",
+    "whole note triplet",
+    "half note triplet",
+    "quarter note triplet",
+    "eighth note triplet",
+    "sixteenth note triplet"
    ]
   },
   {
    "style": 4,
    "category": "Beat",
-   "name": "Beat: 16th patterns",
+   "name": "pattern:",
    "variations": [
     "o___ (16th)",
     "_o__ (16th)",
@@ -93,7 +93,7 @@
   {
    "style": 5,
    "category": "Beat",
-   "name": "Beat: 16th patterns + syncopated",
+   "name": "pattern:",
    "variations": [
     "oo__ (16th)",
     "o_o_ (16th)",
@@ -111,26 +111,26 @@
   },
   {
    "style": 6,
-   "category": "Phrase",
-   "name": "Chord phrases (simple)",
+   "category": "Phrased",
+   "name": "chords (simple)",
    "variations": null
   },
   {
    "style": 7,
-   "category": "Phrase",
-   "name": "Chord phrases (rhythmic)",
+   "category": "Phrased",
+   "name": "chords (rhythmic)",
    "variations": null
   },
   {
    "style": 8,
-   "category": "Phrase",
-   "name": "Strummed chord phrases (simple)",
+   "category": "Phrased",
+   "name": "chords (strummed, simple)",
    "variations": null
   },
   {
    "style": 9,
-   "category": "Phrase",
-   "name": "Strummed chord phrases (rhythmic)",
+   "category": "Phrased",
+   "name": "chords (strummed, rhythmic)",
    "variations": null
   }
  ]
