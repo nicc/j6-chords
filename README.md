@@ -1,6 +1,6 @@
 # J-6 Chords
 
-A quick-reference page for the Roland AIRA Compact J-6: what chords each chord set plays, and what each style and variation does. Built for a phone, works offline.
+A quick-reference page for the Roland AIRA Compact J-6: what chords each chord set plays, and what each style and variation does. Built for a phone, works offline. Hosted [here](https://mcnoose.com/j6-chords).
 
 <img src="docs/screenshot.png" alt="Genre 1 (Pop) with its chords on a one-octave keyboard; phrasing open at style 4, variation 3" width="320">
 
